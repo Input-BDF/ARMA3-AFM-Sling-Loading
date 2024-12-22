@@ -28,19 +28,19 @@ class CfgFunctions
 	};
 };
 
-/*
-Allowed targets:
-  0 - can target all machines (default)
-  1 - can only target clients, execution on the server is denied
-  2 - can only target the server, execution on clients is denied
-  Any other value will be treated as 0.
-*/
 class CfgRemoteExec
 {
   class Functions
   {
-    mode = 1;
-	  // Set allowed remote exec funtions //see e.g.: https://github.com/ryantownshend/advanced_sling_loading_refactored?tab=readme-ov-file#multiplayer-refactor-notes
+    /*
+    Allowed targets:
+      0 - can target all machines (default)
+      1 - can only target clients, execution on the server is denied
+      2 - can only target the server, execution on clients is denied
+      Any other value will be treated as 0.
+    */
+	  // Set allowed remote exec funtions in case mode = 1 is used or forced by some mods
+    // cmp e.g.: https://github.com/ryantownshend/advanced_sling_loading_refactored?tab=readme-ov-file#multiplayer-refactor-notes
     class BDF_Adjust_Transport_Weight   	{ allowedTargets=0; };
     class BDF_Check_Weight_Change       	{ allowedTargets=0; };
     class BDF_fnc_initAFMSLClient         { allowedTargets=1; };

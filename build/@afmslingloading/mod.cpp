@@ -1,4 +1,4 @@
-name = "AFM Sling Loading [v0.0.1]";
+name = "AFM Sling Loading [v0.0.2]";
 author = "Input [BDF]";
 picture = "logo.paa";
 actionName = "GitHub";
